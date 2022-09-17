@@ -19,7 +19,7 @@ export default function TextForm({ value, setValue, timeRange, onSubmit }) {
       variant="outlined"
       onChange={handleChange}
       size={"small"}
-      helperText="Press enter to save"
+      // helperText="Press enter to save"
       onKeyDown={handleSubmit}
       InputProps={{
         endAdornment: (

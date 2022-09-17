@@ -1,0 +1,8 @@
+.slider {
+  width: 60%;
+}
+@media (max-width: 900px) {
+  .slider {
+    width: 90%;
+  }
+}

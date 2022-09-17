@@ -1,11 +1,12 @@
 import TimeRangeSlider from "./TimeRangeSlider";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Typography } from "@mui/material";
 import TextForm from "./TextForm";
 import EventsList from "./EventsList";
 import { useDispatch } from "react-redux";
 import { setSchedule } from "../redux/features/busyScheduleSlice";
 import { v4 as uuidv4 } from "uuid";
+import "./Style/DailyBusySchedule.css";
 
 export default function DailyBusySchedule({ date }) {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ export default function DailyBusySchedule({ date }) {
   function handleDelete(id) {
     setEvents((pre) => pre.filter((event) => event.id !== id));
   }
+
   return (
     <div className="slider" style={style.Container}>
       <EventsList items={events} handleDelete={handleDelete} />
@@ -64,7 +66,6 @@ const style = {
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: "space-between",
-    width: "60%",
     backgroundColor: "#8da6b5",
     borderRadius: "10px",
     padding: "1vh",
