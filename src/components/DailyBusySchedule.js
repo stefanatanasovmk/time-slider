@@ -1,5 +1,5 @@
 import TimeRangeSlider from "./TimeRangeSlider";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Typography } from "@mui/material";
 import TextForm from "./TextForm";
 import EventsList from "./EventsList";
