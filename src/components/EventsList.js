@@ -1,10 +1,9 @@
 import { Typography } from "@mui/material";
 import DeleteBtn from "./DeleteBtn";
 
-export default function EventsList({ items, handleDelete }) {
+export default function EventsList({ items, handleDelete, date }) {
   const style = {
     container: {
-      // height: "50%",
       width: "50%",
       display: "flex",
       flexDirection: "column",
@@ -25,6 +24,9 @@ export default function EventsList({ items, handleDelete }) {
 
   return (
     <div style={style.container}>
+      <Typography variant="subtitle2" color="text.secondary">
+        {date.slice(0, -4)}
+      </Typography>
       {items.map((item, index) => {
         return (
           <div key={index} style={style.eventContainer}>

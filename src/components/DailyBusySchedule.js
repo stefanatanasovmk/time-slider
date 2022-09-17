@@ -1,6 +1,5 @@
 import TimeRangeSlider from "./TimeRangeSlider";
 import { useState } from "react";
-import { Typography } from "@mui/material";
 import TextForm from "./TextForm";
 import EventsList from "./EventsList";
 import { useDispatch } from "react-redux";
@@ -36,11 +35,8 @@ export default function DailyBusySchedule({ date }) {
 
   return (
     <div className="slider" style={style.Container}>
-      <EventsList items={events} handleDelete={handleDelete} />
+      <EventsList items={events} handleDelete={handleDelete} date={date} />
       <div style={style.SliderAndInputFormContainer}>
-        <Typography variant="h6" color="text.secondary">
-          {date}
-        </Typography>
         <div style={style.SliderContainer}>
           <TimeRangeSlider
             value={timeRange}
